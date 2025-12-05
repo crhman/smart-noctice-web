@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, Bell, Calendar, BookOpen, Shield } from 'lucide-react';
+import { ArrowRight, Bell, Calendar, BookOpen, Shield, Github, Twitter, Mail } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -69,6 +69,91 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {/* Brand Section */}
+            <div className="col-span-1 md:col-span-2">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="bg-primary p-2 rounded-lg">
+                  <Bell className="h-6 w-6 text-white" />
+                </div>
+                <span className="text-2xl font-bold">HU</span>
+              </div>
+              <p className="text-gray-600 dark:text-gray-400 mb-4 max-w-md">
+                The modern digital campus platform connecting students, teachers, and administrators for seamless academic communication.
+              </p>
+              <div className="flex gap-4">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">
+                  <Github className="h-5 w-5" />
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">
+                  <Twitter className="h-5 w-5" />
+                </a>
+                <a href="mailto:contact@hu.edu" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">
+                  <Mail className="h-5 w-5" />
+                </a>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h3 className="font-semibold text-lg mb-4 text-gray-900 dark:text-white">Quick Links</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/login" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">
+                    Login
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/register" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">
+                    Register
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/dashboard" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">
+                    Dashboard
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Resources */}
+            <div>
+              <h3 className="font-semibold text-lg mb-4 text-gray-900 dark:text-white">Resources</h3>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">
+                    Documentation
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">
+                    Support
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors">
+                    Terms of Service
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Bottom Bar */}
+          <div className="border-t border-gray-300 dark:border-gray-800 mt-8 pt-8 text-center text-gray-600 dark:text-gray-400">
+            <p>&copy; {new Date().getFullYear()} HU Notice Board. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
